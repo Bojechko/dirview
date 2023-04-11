@@ -76,8 +76,8 @@ int main(int argc, char *argv[])
 
     QFileSystemModel model;
     model.setRootPath("");
-    /*if (parser.isSet(dontUseCustomDirectoryIconsOption))
-        model.iconProvider()->setOptions(QFileIconProvider::DontUseCustomDirectoryIcons);*/
+    if (parser.isSet(dontUseCustomDirectoryIconsOption))
+        model.iconProvider()->setOptions(QFileIconProvider::DontUseCustomDirectoryIcons);
     QTreeView tree;
     tree.setModel(&model);
     if (!rootPath.isEmpty()) {
